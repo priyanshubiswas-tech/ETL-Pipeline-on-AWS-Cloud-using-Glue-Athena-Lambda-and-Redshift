@@ -1,0 +1,12 @@
+{
+  "Name": "my-glue-crawler",
+  "Role": "AWSGlueServiceRole",
+  "DatabaseName": "etl_catalog",
+  "Targets": {
+    "S3Targets": [
+      {
+        "Path": "s3://your-bucket/input-data/"
+      }
+    ]
+  }
+}
