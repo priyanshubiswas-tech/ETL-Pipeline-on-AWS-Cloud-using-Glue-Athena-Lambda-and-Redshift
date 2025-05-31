@@ -1,11 +1,11 @@
 # AWS ETL Pipeline on Cloud
 
-## 🚀 Project Overview
+## Project Overview
 A fully automated and serverless ETL (Extract, Transform, Load) data pipeline built on the AWS Cloud using **Glue**, **Athena**, **Lambda**, **Redshift**, **S3**, and **IAM**. This project demonstrates how to process and transform large datasets with minimal operational overhead and high scalability.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 - **Languages:** Python (PySpark), SQL
 - **Cloud Services:** AWS Glue, S3, Lambda, Redshift, Athena, IAM
 - **Infrastructure as Code:** CloudFormation
@@ -13,7 +13,7 @@ A fully automated and serverless ETL (Extract, Transform, Load) data pipeline bu
 
 ---
 
-## 📊 Architecture
+## Architecture
 
 **Data Flow:**  
 S3 → Glue Crawler → Glue ETL Job (PySpark) → Athena Validation → Lambda Trigger → Redshift
@@ -52,17 +52,17 @@ aws-etl-pipeline/
 
 ---
 
-## ✅ Features & Capabilities
-- 🔁 **Serverless ETL**: Automates data ingestion and transformation.
-- ⚡ **Event-driven Architecture**: Lambda functions trigger Glue jobs based on S3 uploads.
-- 📑 **Schema Inference**: AWS Glue Crawlers generate metadata stored in Glue Data Catalog.
-- 📊 **Ad-hoc Querying**: Use Athena to query raw and transformed data.
-- 🔐 **Secure Access**: IAM roles and policies for fine-grained access control.
-- 📉 **Performance Optimization**: Redshift used for low-latency analytics and dashboarding.
+## Features & Capabilities
+-  **Serverless ETL**: Automates data ingestion and transformation.
+-  **Event-driven Architecture**: Lambda functions trigger Glue jobs based on S3 uploads.
+-  **Schema Inference**: AWS Glue Crawlers generate metadata stored in Glue Data Catalog.
+-  **Ad-hoc Querying**: Use Athena to query raw and transformed data.
+-  **Secure Access**: IAM roles and policies for fine-grained access control.
+-  **Performance Optimization**: Redshift used for low-latency analytics and dashboarding.
 
 ---
 
-## 🧩 Components Description
+##  Components Description
 
 ### 1. `glue_jobs/job_transform.py`
 ```python
@@ -209,14 +209,14 @@ id,name,value
 
 ---
 
-## 📈 Performance Impact
+##  Performance Impact
 - Reduced manual ETL processing by **90%** via automation
 - Improved query performance by **45%** through optimized partitioning and schema design
 - Decreased dashboard latency by **50%** with Redshift backend optimization
 
 ---
 
-## 🧪 How to Run
+##  How to Run
 1. Upload raw data to your S3 bucket
 2. Deploy the infrastructure using the CloudFormation template
 3. Configure IAM roles and policies
@@ -225,12 +225,7 @@ id,name,value
 
 ---
 
-## 📬 Sample Output Screenshots
-*(Add Athena and Redshift screenshots here)*
-
----
-
-## 📘 References
+##  References
 - [AWS Glue Documentation](https://docs.aws.amazon.com/glue/)
 - [Amazon Redshift](https://docs.aws.amazon.com/redshift/)
 - [AWS Lambda Triggers](https://docs.aws.amazon.com/lambda/latest/dg/with-s3.html)
@@ -238,11 +233,3 @@ id,name,value
 
 ---
 
-## 🧠 Author Notes
-This project showcases the potential of combining serverless technologies for scalable data engineering. Suitable for real-time or batch processing scenarios, with easy customization for your own data models.
-
-Feel free to fork or contribute!
-
----
-
-**⭐ Give a star if you find this helpful.**
