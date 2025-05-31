@@ -1,0 +1,26 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  S3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: etl-pipeline-data-bucket
+
+  GlueJob:
+    Type: AWS::Glue::Job
+    Properties:
+      Name: etl-transform-job
+      Role: AWSGlueServiceRole
+      Command:
+        Name: glueetl
+        ScriptLocation: s3://scripts/job_transform.py
+
+  LambdaFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: etl-trigger
+      Handler: lambda_trigger.lambda_handler
+      Role: arn:aws:iam::123456789012:role/lambda-glue-role
+      Code:
+        S3Bucket: scripts
+        S3Key: lambda_trigger.py
+      Runtime: python3.9
