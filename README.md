@@ -29,7 +29,7 @@ S3 → Glue Crawler → Glue ETL Job (PySpark) → Athena Validation → Lambda 
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 ```bash
 aws-etl-pipeline/
 ├── README.md
